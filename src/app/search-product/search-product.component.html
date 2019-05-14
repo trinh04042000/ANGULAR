@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<app-header></app-header>
+<div class="sticky-top" style="background-color: #ffff; margin-top: 5px">
+  <nav class="navbar navbar-light" style="background-color: #EFFBFB;">
+    <a class="navbar-brand"></a>
+    <div class="form-group mb-2">
+      <div *ngIf="products">
+        <p>Tìm được {{products.length}} kết quả</p>
+      </div>
+    </div>
+    <form (ngSubmit)="searchProduct()" [formGroup]="searchForm">
+      <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <select class="custom-select mr-sm-2"
+                  name="keyword" formControlName="keyword" [value]="keyword">
+            <option>Tìm theo giá tiền</option>
+            <option value="1">Từ 5000 VND - 10000 VND</option>
+            <option value="2">Từ 10000 VND - 20000 VND</option>
+            <option value="3">Từ 20000 VND - 50000 VND</option>
+          </select>
+        </div>
+        <div class="col-auto my-1">
+          <button type="submit" class="btn btn-danger">Tìm kiếm</button>
+        </div>
+      </div>
+    </form>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-6 col-md-4" *ngFor="let product of products">
+
+      <img alt="Điểm đến hàng đầu"
+           class=" lazyloaded shake"
+           src="http://localhost:8009/upload/images/{{product.image}}"
+           style="height: 150px;width: 100%">
+
+      <a style="color: black"><h3>{{product.name}}</h3></a>
+      <div class="product_price">{{product.unit_price.toLocaleString('vi') + 'VND'}}</div>
+      <div class="product_action">
+          <button type="button"><i class="fa fa-shopping-cart"></i></button>
+          </div>
+  </div>
+</div>
+
+

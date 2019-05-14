@@ -1,0 +1,52 @@
+<app-nav-bar></app-nav-bar>
+<div class="home">
+<div class="product_card">
+    <div class="home_detail">
+<div *ngIf="product; else nothing">
+    <div class="container">
+        <div class="row">
+            <div class="product_detail">
+            <div class="col">
+                <div class="product_image">
+                <img alt="Điểm đến hàng đầu"
+                     class=""
+                     src="http://127.0.0.1:8000/storage/{{product.image[0]}}"
+                     style="height: 170px;width: 280px">
+                </div>
+                     <div class="row" style="margin-top: 30px">
+                        <div class="col col-sm-4 col-xs-12 hover01">
+                            <figure><img class="hover1" src="http://127.0.0.1:8000/storage/{{product.image[0]}}" style="width:170px; height:150px"
+                                     ></figure>
+                
+                        </div>
+                        <div class="col col-sm-4 col-xs-12 hover01">
+                            <figure><img class="hover2"
+                                 src="http://127.0.0.1:8000/storage/{{product.image[1]}}"
+                                         alt="Card image cap" style="width:170px; height:150px"></figure>
+                        </div>
+                        <div class="col col-sm-4 col-xs-12 hover01">
+                            <figure><img class="hover3"
+                                 src="http://127.0.0.1:8000/storage/{{product.image[2]}}"
+                                         alt="Card image cap" style="width:170px; height:150px"></figure>
+                        </div>
+                    </div>
+                
+            </div>
+            </div>
+            <div class="col" style="border: 1px; color: black">
+                <h4>
+                    {{product.name}}
+                </h4>
+                <h4>Giá:</h4>
+                <p>{{product.unit_price}}</p>
+                <h4>Mô tả:</h4>
+                <p>
+                    {{product.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>

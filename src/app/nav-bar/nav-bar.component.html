@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="https://www.logoground.com/uploads/201657912016-02-044649746bakery-and-cafe.jpg"
+         style="height: 100px; width: 100px">
+         <a [routerLink]="['/home']">Trang chủ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <form (ngSubmit)="searchProduct()" (change)="inputSearch()" [formGroup]="searchForm">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <select class="custom-select mr-sm-2"
+                            name="keyword" formControlName="keyword" [value]="0" style="margin-left: 60px">
+                        <option value="0">Tìm kiếm theo giá tiền</option>
+                        <option value="1">Từ 5000 VND - 10000 VND</option>
+                        <option value="2">Từ 10000 VND- 20000 VND</option>
+                        <option value="3">Từ 20000 VND - 50000 VND</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1">
+                    <button class="btn btn-dark my-2 my-sm-0" type="submit"
+                            [disabled]="keyword == 0" style="margin-left: 50px;"><i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/signup']" style="margin-right: 25px;">Register</button>
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/signin']">Login</button>
+            <!-- <button type="button" class="btn btn-outline-primary" [routerLink]="['/product']">Product</button> -->
+
+        </form>
+    </div>
+</nav>

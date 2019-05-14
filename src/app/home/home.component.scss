@@ -1,0 +1,88 @@
+.product_price {
+  display: inline-block;
+  padding: 0px 15px;
+  height: 40px;
+  line-height: 40px;
+  background: #c0c906;
+  color: #fff;
+  float: left;
+  border-top-right-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.product_action {
+  height: 40px;
+  line-height: 40px;
+  width: 82px;
+  padding: 0px 1px;
+  margin: 0px 0px 0px 100px;
+  background: #3d1a1a;
+  color: #fff;
+  border: 0px;
+  outline: 0px;
+  border-top-right-radius: 10px;
+}
+
+
+.container-fluid {
+  background: antiquewhite;
+}
+// .product {
+//   border: 0.2px solid black;
+//   margin-top: 35px;
+// }
+.ribbon-wrapper{
+  width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+}
+.ribbon sale {
+  background-color: #f90;
+  color: white;
+}
+.ribbon {
+  z-index: 999;
+}
+.ribbon {
+  color: #fff;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  position: relative;
+  padding: 4px 0;
+  left: 1px;
+  top: 4px;
+  width: 80px;
+  text-transform: uppercase;
+   background-color: #3a5c83;
+}
+// .hover01 figure img {
+//   -webkit-transform: scale(1);
+//   transform: scale(1);
+//   -webkit-transition: .3s ease-in-out;
+//   transition: .3s ease-in-out;
+// }
+// .hover01 figure:hover img {
+//   -webkit-transform: scale(1.3);
+//   transform: scale(1.3);
+// }
+.product_img img:hover {
+  // -ms-transform: scale(1.5);
+  // -webkit-transform: scale(1.5);
+  transform: scale(0.5);
+}
+.product_img img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+// .ribbon-wrapper .product_price {
+//   text-decoration: line-through;
+// }

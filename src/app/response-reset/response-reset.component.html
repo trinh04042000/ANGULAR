@@ -1,0 +1,17 @@
+<app-nav-bar></app-nav-bar>
+<app-header></app-header>
+<div class="sign_reset">
+  <div class="container col-md-6">
+    <h2>Send Email for Reset Password</h2>
+    <form class="was-validated" #RequestRestForm="ngForm" (ngSubmit) = "onSubmit()">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="form.email" class="form-control" name='email' required>
+      </div>
+      <div class="form-group">
+      </div>
+      <button [disabled]="!RequestRestForm.valid" type="submit" class="btn btn-primary">Send Password Reset Email</button>
+    </form>
+  </div>
+</div>
+
